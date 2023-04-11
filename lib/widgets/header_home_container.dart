@@ -1,0 +1,93 @@
+import 'package:capsule_patient/constants/colors.dart';
+import 'package:flutter/material.dart';
+
+class headerContainer extends StatelessWidget {
+  const headerContainer({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height / 3.4,
+      decoration: const BoxDecoration(
+          color: KprimaryColor,
+          borderRadius: BorderRadius.only(
+            bottomRight: Radius.circular(30),
+            bottomLeft: Radius.circular(30),
+          )),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Hi Pasindu",
+            style: TextStyle(
+                fontSize: 23, color: kWhite, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          const TextField(
+            decoration: InputDecoration(
+              isDense: true,
+              filled: true,
+              fillColor: Colors.white,
+              prefixIcon: Icon(Icons.search),
+              border: OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.all(Radius.circular(10))),
+              hintText: 'Enter medical name',
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text("OR", style: TextStyle(fontSize: 10, color: kWhite))
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Material(
+            color: KsecondaryColor,
+            borderRadius: BorderRadius.circular(10),
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.06,
+              child: const MaterialButton(
+                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                onPressed: null,
+                child: Text(
+                  "Upload Prescription",
+                  style: const TextStyle(color: kWhite),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Icon(Icons.location_on),
+              Text("87 Galvihara Rd, Dehiwala-Mount Lavinia",
+                  style: TextStyle(fontSize: 15, color: kWhite))
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Text("chnage", style: TextStyle(fontSize: 13, color: kWhite)),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
