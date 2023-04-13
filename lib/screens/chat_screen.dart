@@ -10,12 +10,12 @@ class ChatScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        chatNotifiCard(
+        ChatNotifiCard(
           chatpharmacyname: "CN Pharmacy",
           chattime: "Mar 20",
           chatpharmacylogo: Image.asset("assets/images/phr1.png"),
         ),
-        chatNotifiCard(
+        ChatNotifiCard(
           chatpharmacyname: "Healthcare",
           chattime: "Mar 18",
           chatpharmacylogo: Image.asset("assets/images/phr2.png"),
@@ -25,8 +25,8 @@ class ChatScreen extends StatelessWidget {
   }
 }
 
-class chatNotifiCard extends StatelessWidget {
-  const chatNotifiCard({
+class ChatNotifiCard extends StatelessWidget {
+  const ChatNotifiCard({
     super.key,
     required this.chatpharmacyname,
     required this.chattime,
@@ -69,7 +69,8 @@ class chatNotifiCard extends StatelessWidget {
               children: [
                 Text(
                   chatpharmacyname,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 const Text("Give me a some time........")
               ],

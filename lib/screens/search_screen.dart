@@ -1,6 +1,7 @@
 import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/widgets/medicene_or_eqipment_container.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/medicene_or_eqipment_container.dart';
 
 class SearchScreens extends StatelessWidget {
   const SearchScreens({super.key});
@@ -27,7 +28,7 @@ class SearchScreens extends StatelessWidget {
                 ))
           ],
         ),
-        medicienOrEquipmentContainer(),
+        const MedicienOrEquipmentContainer(),
       ],
     );
   }

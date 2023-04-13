@@ -1,20 +1,20 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class medicienOrEquipmentContainer extends StatelessWidget {
-  const medicienOrEquipmentContainer({
+class MedicienOrEquipmentContainer extends StatelessWidget {
+  const MedicienOrEquipmentContainer({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
+      child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.9,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            mediceneSearchCard(
+            MediceneSearchCard(
               medicinename: "Paracetamol 500g",
               medcineusage: "treat pain and reduce a high temperature (fever)",
               medicinepharmacy: "CN Pharmacy",
@@ -23,10 +23,10 @@ class medicienOrEquipmentContainer extends StatelessWidget {
               medicineimage:
                   Image.asset("assets/images/paracetamol-tablet.png"),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            mediceneSearchCard(
+            MediceneSearchCard(
               medicinename: "Amoxciline 250g",
               medcineusage: "treat pain and reduce a high temperature (fever)",
               medicinepharmacy: "HealthCare ",
@@ -42,8 +42,8 @@ class medicienOrEquipmentContainer extends StatelessWidget {
   }
 }
 
-class mediceneSearchCard extends StatelessWidget {
-  const mediceneSearchCard({
+class MediceneSearchCard extends StatelessWidget {
+  const MediceneSearchCard({
     super.key,
     required this.medicinename,
     required this.medcineusage,

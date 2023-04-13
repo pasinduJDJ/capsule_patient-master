@@ -1,12 +1,10 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:capsule_patient/widgets/common/label_with_icon.dart';
-import 'package:capsule_patient/widgets/common/primary_button_widget.dart';
-import 'package:capsule_patient/widgets/common/text_field_widget.dart';
 import 'package:capsule_patient/widgets/header_home_container.dart';
-import 'package:capsule_patient/widgets/medicene_or_eqipment_container.dart';
 import 'package:capsule_patient/widgets/pharmacy_confoirm_msg.dart';
-import 'package:capsule_patient/widgets/popup_upload_prescription.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/medicene_or_eqipment_container.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                   ))
             ],
           ),
-          medicienOrEquipmentContainer(),
+          const MedicienOrEquipmentContainer(),
           // popupUploadPrescription()
         ],
       ),
@@ -61,7 +59,7 @@ class pharmacyReplyContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // margin: const EdgeInsets.symmetric(horizontal: 10),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 5,
