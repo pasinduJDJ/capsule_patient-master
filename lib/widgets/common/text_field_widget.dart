@@ -41,7 +41,7 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
       children: [
         Text(
           widget.label,
-          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
         ),
         const SizedBox(height: 5),
         TextFormField(

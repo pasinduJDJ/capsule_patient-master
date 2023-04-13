@@ -1,6 +1,11 @@
+import 'package:capsule_patient/constants/colors.dart';
 import 'package:capsule_patient/widgets/common/label_with_icon.dart';
+import 'package:capsule_patient/widgets/common/primary_button_widget.dart';
+import 'package:capsule_patient/widgets/common/text_field_widget.dart';
 import 'package:capsule_patient/widgets/header_home_container.dart';
+import 'package:capsule_patient/widgets/medicene_or_eqipment_container.dart';
 import 'package:capsule_patient/widgets/pharmacy_confoirm_msg.dart';
+import 'package:capsule_patient/widgets/popup_upload_prescription.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,16 +13,41 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: const [
-        headerContainer(),
-        labelWithIcon(
-          icon: Icon(Icons.more_horiz_rounded),
-          label: "Pharmacy Near You",
-        ),
-        pharmacyReplyContainer()
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          const headerContainer(),
+          const labelWithIcon(
+            icon: Icon(Icons.more_horiz_rounded),
+            label: "Pharmacy Near You",
+          ),
+          const pharmacyReplyContainer(),
+          const labelWithIcon(
+            icon: Icon(Icons.access_time),
+            label: "Top Searches",
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: const [
+              TextButton(
+                  onPressed: null,
+                  child: Text(
+                    "Medicines",
+                    style: TextStyle(color: kblack),
+                  )),
+              TextButton(
+                  onPressed: null,
+                  child: Text(
+                    "Equipments",
+                    style: TextStyle(color: kblack),
+                  ))
+            ],
+          ),
+          medicienOrEquipmentContainer(),
+          // popupUploadPrescription()
+        ],
+      ),
     );
   }
 }

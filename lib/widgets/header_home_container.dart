@@ -1,11 +1,11 @@
 import 'package:capsule_patient/constants/colors.dart';
+import 'package:capsule_patient/widgets/popup_upload_prescription.dart';
 import 'package:flutter/material.dart';
 
 class headerContainer extends StatelessWidget {
   const headerContainer({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -59,9 +59,13 @@ class headerContainer extends StatelessWidget {
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.06,
-              child: const MaterialButton(
+              child: MaterialButton(
                 materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                onPressed: null,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) => const popupUploadPrescription());
+                },
                 child: Text(
                   "Upload Prescription",
                   style: const TextStyle(color: kWhite),
