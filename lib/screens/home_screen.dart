@@ -14,39 +14,49 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          const headerContainer(),
-          const labelWithIcon(
-            icon: Icon(Icons.more_horiz_rounded),
-            label: "Pharmacy Near You",
-          ),
-          const pharmacyReplyContainer(),
-          const labelWithIcon(
-            icon: Icon(Icons.access_time),
-            label: "Top Searches",
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              TextButton(
-                  onPressed: null,
-                  child: Text(
-                    "Medicines",
-                    style: TextStyle(color: kblack),
-                  )),
-              TextButton(
-                  onPressed: null,
-                  child: Text(
-                    "Equipments",
-                    style: TextStyle(color: kblack),
-                  ))
-            ],
-          ),
-          medicienOrEquipmentContainer(),
-          // popupUploadPrescription()
-        ],
+      child: Container(
+        color: scaffoldBackground,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const HeaderContainer(),
+            const LabelWithIcon(
+              icon: Icon(Icons.more_horiz_rounded),
+              label: "Pharmacy Near You",
+            ),
+            const pharmacyReplyContainer(),
+            const LabelWithIcon(
+              icon: Icon(Icons.access_time),
+              label: "Top Searches",
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  TextButton(
+                    onPressed: null,
+                    child: Text(
+                      "Medicines",
+                      style: TextStyle(color: kblack),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: null,
+                    child: Text(
+                      "Equipments",
+                      style: TextStyle(color: kblack),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            MedicienOrEquipmentContainer(),
+            // popupUploadPrescription()
+          ],
+        ),
       ),
     );
   }
@@ -71,7 +81,7 @@ class pharmacyReplyContainer extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-          pharmacyConfoirmMsgCard(
+          PharmacyConfoirmMsgCard(
             pharmacyname: "CN Pharmacy",
             pharmacylocation: "Ward PI,Colombo",
             pharmcydistance: "2KM",
@@ -83,7 +93,7 @@ class pharmacyReplyContainer extends StatelessWidget {
           const SizedBox(
             width: 15,
           ),
-          pharmacyConfoirmMsgCard(
+          PharmacyConfoirmMsgCard(
             pharmacyname: "Agura Pharmacy",
             pharmacylocation: "Up Street Dehiwela",
             pharmcydistance: "1.5KM",

@@ -1,8 +1,8 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class medicienOrEquipmentContainer extends StatelessWidget {
-  const medicienOrEquipmentContainer({
+class MedicienOrEquipmentContainer extends StatelessWidget {
+  const MedicienOrEquipmentContainer({
     super.key,
   });
 
@@ -10,9 +10,10 @@ class medicienOrEquipmentContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
+        padding: EdgeInsets.symmetric(vertical: 10),
         width: MediaQuery.of(context).size.width * 0.9,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             mediceneSearchCard(
               medicinename: "Paracetamol 500g",
@@ -63,16 +64,18 @@ class mediceneSearchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(vertical: 12),
+      height: MediaQuery.of(context).size.height * 0.18,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20)),
-        color: scaffoldBackground,
+        color: kWhite,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Container(
-              width: 100,
-              height: 100,
+              width: 110,
+              height: 110,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: medicineimage.image, fit: BoxFit.fill),
@@ -81,7 +84,7 @@ class mediceneSearchCard extends StatelessWidget {
             width: 8,
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
@@ -123,11 +126,11 @@ class mediceneSearchCard extends StatelessWidget {
                 "Usage",
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
               ),
-              Text(
-                medcineusage,
-                style: const TextStyle(fontSize: 11),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+              Flexible(
+                child: Text(
+                  medcineusage,
+                  style: const TextStyle(fontSize: 11),
+                ),
               ),
               const SizedBox(
                 height: 10,

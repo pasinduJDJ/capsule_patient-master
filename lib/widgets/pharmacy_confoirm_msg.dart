@@ -1,8 +1,8 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class pharmacyConfoirmMsgCard extends StatelessWidget {
-  const pharmacyConfoirmMsgCard({
+class PharmacyConfoirmMsgCard extends StatelessWidget {
+  const PharmacyConfoirmMsgCard({
     super.key,
     required this.pharmacyname,
     required this.pharmacylocation,

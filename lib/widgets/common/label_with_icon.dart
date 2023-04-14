@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-class labelWithIcon extends StatelessWidget {
-  const labelWithIcon({
+class LabelWithIcon extends StatelessWidget {
+  const LabelWithIcon({
     super.key,
     required this.icon,
     required this.label,

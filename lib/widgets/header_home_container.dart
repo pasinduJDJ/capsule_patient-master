@@ -2,8 +2,8 @@ import 'package:capsule_patient/constants/colors.dart';
 import 'package:capsule_patient/widgets/popup_upload_prescription.dart';
 import 'package:flutter/material.dart';
 
-class headerContainer extends StatelessWidget {
-  const headerContainer({
+class HeaderContainer extends StatelessWidget {
+  const HeaderContainer({
     super.key,
   });
   @override
@@ -64,7 +64,7 @@ class headerContainer extends StatelessWidget {
                 onPressed: () {
                   showDialog(
                       context: context,
-                      builder: (context) => const popupUploadPrescription());
+                      builder: (context) => const PopupUploadPrescription());
                 },
                 child: Text(
                   "Upload Prescription",

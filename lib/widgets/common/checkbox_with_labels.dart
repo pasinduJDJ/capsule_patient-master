@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class checkBoxWithLabels extends StatelessWidget {
-  const checkBoxWithLabels({
+class CheckBoxWithLabels extends StatelessWidget {
+  const CheckBoxWithLabels({
     super.key,
     required this.isChecked,
     required this.label1,

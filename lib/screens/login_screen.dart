@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 isPassword: true,
               ),
               const SizedBox(height: 10),
-              const checkBoxWithLabels(
+              const CheckBoxWithLabels(
                 isChecked: true,
                 label1: "Remember me",
                 label2: "Forget Password",

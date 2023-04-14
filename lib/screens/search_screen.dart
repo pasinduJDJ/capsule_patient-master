@@ -7,28 +7,31 @@ class SearchScreens extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: const [
-            TextButton(
-                onPressed: null,
-                child: Text(
-                  "Medicines",
-                  style: TextStyle(color: kblack),
-                )),
-            TextButton(
-                onPressed: null,
-                child: Text(
-                  "Equipments",
-                  style: TextStyle(color: kblack),
-                ))
-          ],
-        ),
-        medicienOrEquipmentContainer(),
-      ],
+    return Container(
+      color: scaffoldBackground,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: const [
+              TextButton(
+                  onPressed: null,
+                  child: Text(
+                    "Medicines",
+                    style: TextStyle(color: kblack),
+                  )),
+              TextButton(
+                  onPressed: null,
+                  child: Text(
+                    "Equipments",
+                    style: TextStyle(color: kblack),
+                  ))
+            ],
+          ),
+          MedicienOrEquipmentContainer(),
+        ],
+      ),
     );
   }
 }

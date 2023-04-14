@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
 
-class popupUploadPrescription extends StatelessWidget {
-  const popupUploadPrescription({
+class PopupUploadPrescription extends StatelessWidget {
+  const PopupUploadPrescription({
     super.key,
   });
 
