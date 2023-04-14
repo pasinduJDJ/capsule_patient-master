@@ -1,3 +1,4 @@
+import 'package:capsule_patient/screens/notification_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
@@ -24,7 +25,13 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
               const SizedBox(width: 10),
               IconButton(
                 icon: const Icon(Icons.notifications_rounded),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              NotificationScreen()));
+                },
               ),
               const SizedBox(width: 10),
               const CircleAvatar(
