@@ -65,7 +65,7 @@ class mediceneSearchCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 12),
-      height: MediaQuery.of(context).size.height * 0.18,
+      height: MediaQuery.of(context).size.height * 0.17,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20)),
         color: kWhite,
@@ -84,43 +84,20 @@ class mediceneSearchCard extends StatelessWidget {
             width: 8,
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
                 "Medicine name",
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    medicinename,
-                    style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.all(2.0),
-                    decoration: BoxDecoration(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(10.0)),
-                      border: Border.all(
-                        color: Colors.blue,
-                        width: 1.0,
-                      ),
-                    ),
-                    child: Text(
-                      medicineavilability,
-                      style: const TextStyle(fontSize: 15.0),
-                    ),
-                  )
-                ],
+              Text(
+                medicinename,
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
-                height: 10,
+                height: 8,
               ),
               const Text(
                 "Usage",
@@ -133,32 +110,16 @@ class mediceneSearchCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 8,
               ),
               const Text(
                 "Pharmacy",
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    medicinepharmacy,
-                    style: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.bold),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    "price : LKR $medicineprice",
-                    style: const TextStyle(fontSize: 12),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
+              Text(
+                medicinepharmacy,
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
             ],
           )

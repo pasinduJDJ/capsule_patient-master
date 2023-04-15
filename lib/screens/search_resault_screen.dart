@@ -76,31 +76,6 @@ class SearchResaultScreen extends StatelessWidget {
                               "Paracetamol 500g",
                               style: TextStyle(fontSize: 30),
                             ),
-                            ///////////medicine prices
-                            Row(
-                              children: [
-                                Text("LKR 45/card"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                ///////////////////////medicine Stocks
-                                Container(
-                                  padding: const EdgeInsets.all(2.0),
-                                  decoration: BoxDecoration(
-                                    borderRadius: const BorderRadius.all(
-                                        Radius.circular(10.0)),
-                                    border: Border.all(
-                                      color: Colors.blue,
-                                      width: 1.0,
-                                    ),
-                                  ),
-                                  child: Text(
-                                    "In stock",
-                                    style: const TextStyle(fontSize: 15.0),
-                                  ),
-                                )
-                              ],
-                            )
                           ],
                         ),
                         const Spacer(),
@@ -108,95 +83,17 @@ class SearchResaultScreen extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.bookmark_outline,
-                              size: 30,
+                              size: 20,
                             ),
                             Text("save")
                           ],
                         )
                       ],
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: const [
-                        Icon(Icons.add),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        ///////////////////// medicine quantity
-                        Text("2"),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(Icons.add),
-                        Spacer(),
-                        /////////////////////// medicine buy button
-                        PrimaryButtonWidget(
-                          text: "Buy",
-                          height: 30,
-                        ),
-                      ],
-                    ),
                     SizedBox(
-                      height: 15,
-                    ),
-                    //////////////////////////////////////////// pharmacy details(name,location,logo)
-                    Container(
-                      padding: const EdgeInsets.all(10),
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 10,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: KsecondaryColor,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          const SizedBox(
-                            width: 40,
-                            height: 40,
-                            child: CircleAvatar(
-                              backgroundImage:
-                                  ////////////////////////////pharmacy logo
-                                  AssetImage("assets/images/phr1.png"),
-                              radius: 100,
-                            ),
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text(
-                                /////////////////////pharmacy name
-                                "CN Pharmacy",
-                                style: const TextStyle(
-                                    fontSize: 16, color: kWhite),
-                              ),
-                              const SizedBox(
-                                height: 3,
-                              ),
-                              ////////////////////pharmacy location
-                              Text(
-                                "2KmAhead",
-                                style: const TextStyle(color: kWhite),
-                              )
-                            ],
-                          ),
-                          const PrimaryButtonWidget(
-                            text: "View",
-                            width: 80,
-                            height: 25,
-                          )
-                        ],
-                      ),
+                      height: 25,
                     ),
                     //////////////////////////////// medicine main Details
-                    SizedBox(
-                      height: 10,
-                    ),
-
                     Text(
                       "Description",
                       style: TextStyle(fontSize: 16),
