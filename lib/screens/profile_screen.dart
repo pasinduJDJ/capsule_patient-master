@@ -24,7 +24,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       color: scaffoldBackground,
       child: Center(
         child: Column(
@@ -33,13 +33,13 @@ class ProfileScreen extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width * 0.85,
               height: MediaQuery.of(context).size.height / 6.5,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: kWhite,
                   borderRadius: BorderRadius.all(Radius.circular(60))),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 100,
                     height: 100,
                     child: CircleAvatar(
@@ -48,13 +48,13 @@ class ProfileScreen extends StatelessWidget {
                       radius: 100,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         "Pasindu Dulanjana ",
                         style: TextStyle(
@@ -70,24 +70,24 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               width: MediaQuery.of(context).size.width * 0.85,
               height: MediaQuery.of(context).size.height / 2.5,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: kWhite,
                   borderRadius: BorderRadius.all(Radius.circular(30))),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "First Name",
                     style: TextStyle(
                       fontSize: 12,
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "Pasindu Dulanjana",
                         style: TextStyle(
@@ -100,17 +100,17 @@ class ProfileScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Text(
+                  const Text(
                     "Last Name",
                     style: TextStyle(
                       fontSize: 12,
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "Anuruddha",
                         style: TextStyle(
@@ -123,17 +123,17 @@ class ProfileScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Text(
+                  const Text(
                     "Mobile number",
                     style: TextStyle(
                       fontSize: 12,
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "+94767066455",
                         style: TextStyle(
@@ -146,17 +146,17 @@ class ProfileScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Text(
+                  const Text(
                     "Date of Birth",
                     style: TextStyle(
                       fontSize: 12,
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "2000-10-25",
                         style: TextStyle(
@@ -169,10 +169,10 @@ class ProfileScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Text(
+                  const Text(
                     "Location",
                     style: TextStyle(
                       fontSize: 12,
@@ -197,24 +197,24 @@ class ProfileScreen extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 14),
               width: MediaQuery.of(context).size.width * 0.85,
               height: MediaQuery.of(context).size.height / 7,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: kWhite,
                   borderRadius: BorderRadius.all(Radius.circular(30))),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Primary email address",
                     style: TextStyle(
                       fontSize: 12,
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "pasindudulanjanarj@gmail.com",
                         style: TextStyle(
@@ -227,17 +227,17 @@ class ProfileScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
-                  Text(
+                  const Text(
                     "Password",
                     style: TextStyle(
                       fontSize: 12,
                     ),
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "*******************",
                         style: TextStyle(

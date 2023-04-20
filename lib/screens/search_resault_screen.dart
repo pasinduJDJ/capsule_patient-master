@@ -1,8 +1,5 @@
 import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/widgets/common/primary_button_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class SearchResaultScreen extends StatelessWidget {
   const SearchResaultScreen({
@@ -70,7 +67,7 @@ class SearchResaultScreen extends StatelessWidget {
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             //////////medicine name
                             Text(
                               "Paracetamol 500g",
@@ -80,7 +77,7 @@ class SearchResaultScreen extends StatelessWidget {
                         ),
                         const Spacer(),
                         Column(
-                          children: [
+                          children: const [
                             Icon(
                               Icons.bookmark_outline,
                               size: 20,
@@ -90,47 +87,47 @@ class SearchResaultScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 25,
                     ),
                     //////////////////////////////// medicine main Details
-                    Text(
+                    const Text(
                       "Description",
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     /////////////////////////////////////////////////medicine Description
-                    Text(
+                    const Text(
                         "Paracetamol, also known as acetaminophen or para-hydroxyacetanilide, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol."),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       "Side Effects",
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     /////////////////////////////////////////////////medicine Side effect
-                    Text(
+                    const Text(
                         "an allergic reaction, which can cause a rash and swelling"),
-                    Text(
+                    const Text(
                         "liver and kidney damage, if you take too much (overdose) – this can be fatal in severe cases"),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
-                    Text(
+                    const Text(
                       "How to take",
                       style: TextStyle(fontSize: 16),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     /////////////////////////////////////////////////medicine How to Take
-                    Text(
+                    const Text(
                         "Adults can usually take 1 or 2 tablets (500mg) every 4-6 hours"),
                   ]),
             ),

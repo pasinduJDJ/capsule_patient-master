@@ -2,8 +2,6 @@ import 'package:capsule_patient/widgets/common/primary_button_widget.dart';
 import 'package:capsule_patient/widgets/common/text_field_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../constants/colors.dart';
-
 class PopupUploadPrescription extends StatelessWidget {
   const PopupUploadPrescription({
     super.key,
@@ -12,7 +10,7 @@ class PopupUploadPrescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Text("Prescription Submittion"),
+      title: const Text("Prescription Submittion"),
       content: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height / 2,

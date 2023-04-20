@@ -1,5 +1,4 @@
 import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/screens/customer_chat_screen.dart';
 import 'package:capsule_patient/widgets/chat_notifi_card.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class ChatScreen extends StatelessWidget {
             chattime: "Mar 20",
             chatpharmacylogo: Image.asset("assets/images/phr1.png"),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           ChatNotifiCard(

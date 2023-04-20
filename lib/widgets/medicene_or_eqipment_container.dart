@@ -10,12 +10,12 @@ class MedicienOrEquipmentContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10),
         width: MediaQuery.of(context).size.width * 0.9,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            mediceneSearchCard(
+            MediceneSearchCard(
               medicinename: "Paracetamol 500g",
               medcineusage: "treat pain and reduce a high temperature (fever)",
               medicinepharmacy: "CN Pharmacy",
@@ -24,10 +24,10 @@ class MedicienOrEquipmentContainer extends StatelessWidget {
               medicineimage:
                   Image.asset("assets/images/paracetamol-tablet.png"),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            mediceneSearchCard(
+            MediceneSearchCard(
               medicinename: "Amoxciline 250g",
               medcineusage: "treat pain and reduce a high temperature (fever)",
               medicinepharmacy: "HealthCare ",
@@ -43,8 +43,8 @@ class MedicienOrEquipmentContainer extends StatelessWidget {
   }
 }
 
-class mediceneSearchCard extends StatelessWidget {
-  const mediceneSearchCard({
+class MediceneSearchCard extends StatelessWidget {
+  const MediceneSearchCard({
     super.key,
     required this.medicinename,
     required this.medcineusage,
@@ -64,7 +64,7 @@ class mediceneSearchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 12),
+      padding: const EdgeInsets.symmetric(vertical: 12),
       height: MediaQuery.of(context).size.height * 0.17,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20)),

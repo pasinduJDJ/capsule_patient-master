@@ -30,7 +30,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                       context,
                       MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              NotificationScreen()));
+                              const NotificationScreen()));
                 },
               ),
               const SizedBox(width: 10),

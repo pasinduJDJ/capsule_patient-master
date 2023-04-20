@@ -31,7 +31,7 @@ class NotificationCard extends StatelessWidget {
           Container(
             height: MediaQuery.of(context).size.height * 0.08,
             decoration: const BoxDecoration(
-                color: KsecondaryColor,
+                color: kSecondaryColor,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -72,7 +72,7 @@ class NotificationCard extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.04,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -83,16 +83,16 @@ class NotificationCard extends StatelessWidget {
                   children: [
                     Text(
                       notifipharmacyname,
-                      style:
-                          TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+                      style: const TextStyle(
+                          fontSize: 13, fontWeight: FontWeight.w500),
                     ),
                     Text(
                       notifistate,
-                      style: TextStyle(fontSize: 10),
+                      style: const TextStyle(fontSize: 10),
                     )
                   ],
                 ),
-                Icon(Icons.message_rounded)
+                const Icon(Icons.message_rounded)
               ],
             ),
           )

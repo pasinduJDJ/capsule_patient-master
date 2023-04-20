@@ -29,7 +29,7 @@ class SearchScreens extends StatelessWidget {
                   ))
             ],
           ),
-          MedicienOrEquipmentContainer(),
+          const MedicienOrEquipmentContainer(),
         ],
       ),
     );

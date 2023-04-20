@@ -1,10 +1,10 @@
-import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/screens/home.dart';
 import 'package:capsule_patient/screens/register_screen.dart';
-import 'package:capsule_patient/utils/screen_size.dart';
-import 'package:capsule_patient/widgets/common/checkbox_with_labels.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../constants/colors.dart';
+import '../utils/screen_size.dart';
+import '../widgets/common/checkbox_with_labels.dart';
 import '../widgets/common/primary_button_widget.dart';
 import '../widgets/common/text_field_widget.dart';
 
@@ -17,34 +17,27 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-            // padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-      children: [
-        Row(children: [
-          Container(
-            width: MediaQuery.of(context).size.width / 1.4,
-            height: MediaQuery.of(context).size.height * 0.4,
-            decoration: const BoxDecoration(
-                // borderRadius: BorderRadius.circular(80),
-                image: DecorationImage(
-                    image: AssetImage("assets/images/blueDesignSignIn.png"))),
-          ),
-        ]),
-        SizedBox(
-          height: 30,
-        ),
-        Container(
-          child: Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.8,
+      body: Container(
+        width: ScreenSize.width,
+        padding: const EdgeInsets.symmetric(horizontal: 30),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Form(
+              key: _formKey,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const TextFormFieldWidget(
-                    label: "Phone number or Email",
+                    label: "Email",
                   ),
                   const SizedBox(
                     height: 10,
@@ -54,77 +47,63 @@ class _LoginScreenState extends State<LoginScreen> {
                     isPassword: true,
                   ),
                   const SizedBox(height: 10),
-                  const CheckBoxWithLabels(
-                    isChecked: true,
-                    label1: "Remember me",
-                    label2: "Forget Password",
+                  CheckBoxWithLabels(
+                    onRememberCheck: ((isChecked) =>
+                        debugPrint(isChecked.toString())),
+                    label: "Remember me",
                   ),
                   PrimaryButtonWidget(
-                    ontap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Home()),
-                      );
-                    },
-                    width: MediaQuery.of(context).size.width / 2.5,
-                    height: MediaQuery.of(context).size.height * 0.06,
+                    ontap: () async {},
+                    height: ScreenSize.height * 0.06,
+                    width: ScreenSize.width,
                     text: "Sign in",
-                  ),
-                  const SizedBox(height: 5),
-                  const Text(
-                    "OR",
-                    style: TextStyle(fontSize: 10),
-                  ),
-                  // const SizedBox(height: 5),
-                  OutlinedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      side: MaterialStateProperty.all(const BorderSide(
-                          color: KprimaryColor,
-                          width: 1.0,
-                          style: BorderStyle.solid)),
-                      shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10))),
-                    ),
-                    child: const Text("Sign in With Google",
-                        style: TextStyle(
-                            fontSize: 13,
-                            color: kblack,
-                            fontWeight: FontWeight.w100)),
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Dont have an account ? "),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const RegisterScreen()),
-                            );
-                          },
-                          child: Text(
-                            "  Register",
-                            style: TextStyle(
-                              color: KprimaryColor,
-                            ),
-                          ))
-                      // Text(
-                      //   "  Register",
-                      //   style: TextStyle(
-                      //     color: KprimaryColor,
-                      //   ),
-                      // )
-                    ],
                   ),
                 ],
               ),
             ),
-          ),
-        )
-      ],
-    )));
+            const SizedBox(height: 10),
+            const Text(
+              "OR",
+              style: TextStyle(fontSize: 14),
+            ),
+            const SizedBox(height: 10),
+            PrimaryButtonWidget(
+              ontap: () {},
+              isOutlined: true,
+              height: ScreenSize.height * 0.06,
+              width: ScreenSize.width,
+              text: "Sign in with Google",
+            ),
+            const SizedBox(height: 20),
+            RichText(
+              text: TextSpan(
+                style: const TextStyle(color: Colors.black),
+                children: [
+                  const TextSpan(
+                    text: "Dont have an account? ",
+                  ),
+                  TextSpan(
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => const RegisterScreen(),
+                          ),
+                        );
+                      },
+                    text: "Register",
+                    style: const TextStyle(
+                      color: kPrimaryColor,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

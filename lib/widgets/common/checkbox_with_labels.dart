@@ -1,47 +1,49 @@
+import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
-class CheckBoxWithLabels extends StatelessWidget {
+class CheckBoxWithLabels extends StatefulWidget {
   const CheckBoxWithLabels({
     super.key,
-    required this.isChecked,
-    required this.label1,
-    required this.label2,
+    required this.label,
+    required this.onRememberCheck,
   });
 
-  final bool isChecked;
-  final String label1;
-  final String label2;
+  final OnRememberCheck onRememberCheck;
+  final String label;
 
   @override
+  State<CheckBoxWithLabels> createState() => _CheckBoxWithLabelsState();
+}
+
+class _CheckBoxWithLabelsState extends State<CheckBoxWithLabels> {
   Color getColor(Set<MaterialState> states) {
-    const Set<MaterialState> interactiveStates = <MaterialState>{
-      MaterialState.pressed,
-      MaterialState.hovered,
-      MaterialState.focused,
-    };
-    if (states.any(interactiveStates.contains)) {
-      return Colors.blue;
-    }
-    return Colors.black;
+    return kPrimaryColor;
   }
 
+  bool isChecked = false;
+
+  @override
   Widget build(BuildContext context) {
     return Row(children: [
       Checkbox(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         checkColor: Colors.white,
         fillColor: MaterialStateProperty.resolveWith(getColor),
         value: isChecked,
-        onChanged: (bool? value) {},
+        onChanged: (bool? value) {
+          if (value != null) {
+            isChecked = value;
+            widget.onRememberCheck(isChecked);
+            setState(() {});
+          }
+        },
       ),
       Text(
-        '$label1',
-        style: TextStyle(fontSize: 13),
-      ),
-      const Spacer(),
-      Text(
-        '$label2',
-        style: TextStyle(fontSize: 13, color: Colors.blue),
+        widget.label,
+        style: const TextStyle(fontSize: 15),
       ),
     ]);
   }
 }
+
+typedef OnRememberCheck = void Function(bool isChecked);

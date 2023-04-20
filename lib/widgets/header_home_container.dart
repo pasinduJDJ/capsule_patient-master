@@ -9,11 +9,11 @@ class HeaderContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height / 3.4,
       decoration: const BoxDecoration(
-          color: KprimaryColor,
+          color: kPrimaryColor,
           borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(30),
             bottomLeft: Radius.circular(30),
@@ -54,7 +54,7 @@ class HeaderContainer extends StatelessWidget {
             height: 10,
           ),
           Material(
-            color: KsecondaryColor,
+            color: kSecondaryColor,
             borderRadius: BorderRadius.circular(10),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
@@ -66,9 +66,9 @@ class HeaderContainer extends StatelessWidget {
                       context: context,
                       builder: (context) => const PopupUploadPrescription());
                 },
-                child: Text(
+                child: const Text(
                   "Upload Prescription",
-                  style: const TextStyle(color: kWhite),
+                  style: TextStyle(color: kWhite),
                 ),
               ),
             ),

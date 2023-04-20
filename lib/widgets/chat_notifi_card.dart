@@ -21,7 +21,7 @@ class ChatNotifiCard extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (BuildContext context) => customerChatScreen(
+                builder: (BuildContext context) => CustomerChatScreen(
                       pharmacyname: chatpharmacyname,
                     )));
       },
@@ -46,7 +46,8 @@ class ChatNotifiCard extends StatelessWidget {
               children: [
                 Text(
                   chatpharmacyname,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold),
                 ),
                 const Text("Give me a some time........")
               ],

@@ -13,13 +13,13 @@ class LabelWithIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.symmetric(horizontal: 35, vertical: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             label,
-            style: TextStyle(fontSize: 17),
+            style: const TextStyle(fontSize: 17),
           ),
           const Spacer(),
           icon

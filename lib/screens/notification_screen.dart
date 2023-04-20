@@ -39,49 +39,47 @@ class NotificationScreen extends StatelessWidget {
                 )
               ],
             ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  NotificationCard(
-                    notifipharmacyname: "CN Pharmacy",
-                    notifidistance: "2Km",
-                    notifimedicinename: "Paracetamol 500g",
-                    notifistate: "Hello we have your required medicine",
-                    notifipharmacylogo: Image.asset("assets/images/phr1.png"),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  NotificationCard(
-                    notifipharmacyname: "CN Pharmacy",
-                    notifidistance: "2Km",
-                    notifimedicinename: "Paracetamol 500g",
-                    notifistate: "Hello we have your required medicine",
-                    notifipharmacylogo: Image.asset("assets/images/phr1.png"),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  NotificationCard(
-                    notifipharmacyname: "CN Pharmacy",
-                    notifidistance: "2Km",
-                    notifimedicinename: "Paracetamol 500g",
-                    notifistate: "Hello we have your required medicine",
-                    notifipharmacylogo: Image.asset("assets/images/phr1.png"),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  NotificationCard(
-                    notifipharmacyname: "CN Pharmacy",
-                    notifidistance: "2Km",
-                    notifimedicinename: "Paracetamol 500g",
-                    notifistate: "Hello we have your required medicine",
-                    notifipharmacylogo: Image.asset("assets/images/phr1.png"),
-                  ),
-                ],
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                NotificationCard(
+                  notifipharmacyname: "CN Pharmacy",
+                  notifidistance: "2Km",
+                  notifimedicinename: "Paracetamol 500g",
+                  notifistate: "Hello we have your required medicine",
+                  notifipharmacylogo: Image.asset("assets/images/phr1.png"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                NotificationCard(
+                  notifipharmacyname: "CN Pharmacy",
+                  notifidistance: "2Km",
+                  notifimedicinename: "Paracetamol 500g",
+                  notifistate: "Hello we have your required medicine",
+                  notifipharmacylogo: Image.asset("assets/images/phr1.png"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                NotificationCard(
+                  notifipharmacyname: "CN Pharmacy",
+                  notifidistance: "2Km",
+                  notifimedicinename: "Paracetamol 500g",
+                  notifistate: "Hello we have your required medicine",
+                  notifipharmacylogo: Image.asset("assets/images/phr1.png"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                NotificationCard(
+                  notifipharmacyname: "CN Pharmacy",
+                  notifidistance: "2Km",
+                  notifimedicinename: "Paracetamol 500g",
+                  notifistate: "Hello we have your required medicine",
+                  notifipharmacylogo: Image.asset("assets/images/phr1.png"),
+                ),
+              ],
             ),
           ],
         ),

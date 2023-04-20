@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class customerChatScreen extends StatelessWidget {
-  const customerChatScreen({super.key, required this.pharmacyname});
+class CustomerChatScreen extends StatelessWidget {
+  const CustomerChatScreen({super.key, required this.pharmacyname});
 
   final String pharmacyname;
 

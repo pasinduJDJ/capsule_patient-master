@@ -26,13 +26,13 @@ class PharmacyConfoirmMsgCard extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width / 1.3,
       decoration: BoxDecoration(
-        color: KprimaryColor,
+        color: kPrimaryColor,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Container(
+          SizedBox(
             height: 80,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -56,7 +56,7 @@ class PharmacyConfoirmMsgCard extends StatelessWidget {
                       children: [
                         Text(
                           pharmacyname,
-                          style: TextStyle(color: kWhite, fontSize: 18),
+                          style: const TextStyle(color: kWhite, fontSize: 18),
                         ),
                         const SizedBox(
                           width: 8,
@@ -68,11 +68,11 @@ class PharmacyConfoirmMsgCard extends StatelessWidget {
                         ),
                         Text(
                           pharmacyratingavg.toString(),
-                          style: TextStyle(color: kWhite, fontSize: 14),
+                          style: const TextStyle(color: kWhite, fontSize: 14),
                         ),
                         Text(
-                          "(" + pharmacyrating.toString() + ")",
-                          style: TextStyle(color: kWhite, fontSize: 12),
+                          "($pharmacyrating)",
+                          style: const TextStyle(color: kWhite, fontSize: 12),
                         ),
                       ],
                     ),
@@ -83,7 +83,7 @@ class PharmacyConfoirmMsgCard extends StatelessWidget {
                         style: TextStyle(color: kWhite, fontSize: 12)),
                     Text(
                       pharmacylocation,
-                      style: TextStyle(color: kWhite, fontSize: 18),
+                      style: const TextStyle(color: kWhite, fontSize: 18),
                     ),
                   ],
                 ),
@@ -101,7 +101,7 @@ class PharmacyConfoirmMsgCard extends StatelessWidget {
                   ),
                   Text(
                     pharmcydistance,
-                    style: TextStyle(color: kWhite, fontSize: 18),
+                    style: const TextStyle(color: kWhite, fontSize: 18),
                   ),
                 ],
               ),
@@ -113,7 +113,7 @@ class PharmacyConfoirmMsgCard extends StatelessWidget {
                   ),
                   Text(
                     pharmacyopenhours,
-                    style: TextStyle(color: kWhite, fontSize: 18),
+                    style: const TextStyle(color: kWhite, fontSize: 18),
                   ),
                 ],
               )

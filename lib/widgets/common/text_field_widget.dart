@@ -28,13 +28,13 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
     InputBorder? inputBorder(bool isFocused) => widget.underLined
         ? UnderlineInputBorder(
             borderSide:
-                BorderSide(color: isFocused ? KprimaryColor : Colors.grey))
+                BorderSide(color: isFocused ? kPrimaryColor : Colors.grey))
         : OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(borderRadius),
             ),
             borderSide:
-                BorderSide(color: isFocused ? KprimaryColor : Colors.grey),
+                BorderSide(color: isFocused ? kPrimaryColor : Colors.grey),
           );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
