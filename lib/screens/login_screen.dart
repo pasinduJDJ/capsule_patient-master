@@ -1,3 +1,4 @@
+import 'package:capsule_patient/screens/home.dart';
 import 'package:capsule_patient/screens/register_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +71,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           label: "Remember me",
                         ),
                         PrimaryButtonWidget(
-                          ontap: () async {},
+                          ontap: () async {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (_) {
+                              return const Home();
+                            }));
+                          },
                           height: ScreenSize.height * 0.06,
                           width: ScreenSize.width,
                           text: "Sign in",
