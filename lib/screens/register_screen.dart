@@ -1,4 +1,5 @@
 import 'package:capsule_patient/constants/colors.dart';
+import 'package:capsule_patient/screens/home.dart';
 import 'package:capsule_patient/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 import '../widgets/common/checkbox_with_labels.dart';
@@ -256,9 +257,13 @@ class OtpConfoirmMsg extends StatelessWidget {
                       style: TextStyle(color: kPrimaryColor, fontSize: 12),
                     )),
                 const Spacer(),
-                const PrimaryButtonWidget(
+                PrimaryButtonWidget(
                   text: "Finish",
                   height: 30,
+                  ontap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const Home()));
+                  },
                 )
               ],
             )
