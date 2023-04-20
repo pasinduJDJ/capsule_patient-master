@@ -19,11 +19,13 @@ class ChatNotifiCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (BuildContext context) => CustomerChatScreen(
-                      pharmacyname: chatpharmacyname,
-                    )));
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => const ChatDetalsScreen(
+              userName: "CN Pharmacy",
+            ),
+          ),
+        );
       },
       child: Container(
         width: MediaQuery.of(context).size.width,

@@ -1,7 +1,7 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:capsule_patient/widgets/common/label_with_icon.dart';
 import 'package:capsule_patient/widgets/header_home_container.dart';
-import 'package:capsule_patient/widgets/medicene_or_eqipment_container.dart';
+import 'package:capsule_patient/widgets/medicine_or_eqipment_container.dart';
 import 'package:capsule_patient/widgets/pharmacy_confoirm_msg.dart';
 import 'package:flutter/material.dart';
 

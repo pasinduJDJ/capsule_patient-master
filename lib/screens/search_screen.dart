@@ -1,5 +1,5 @@
 import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/widgets/medicene_or_eqipment_container.dart';
+import 'package:capsule_patient/widgets/medicine_or_eqipment_container.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreens extends StatelessWidget {

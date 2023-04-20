@@ -19,9 +19,18 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     ScreenSize.init(context);
-    return const Scaffold(
-      body: Center(
-        child: Text("Splash Screen"),
+    return Scaffold(
+      body: Container(
+        width: ScreenSize.width,
+        height: ScreenSize.height,
+        color: Colors.white,
+        child: Center(
+          child: Image.asset(
+            'assets/images/logo.png',
+            width: ScreenSize.width * 0.5,
+            height: ScreenSize.width * 0.5,
+          ),
+        ),
       ),
     );
   }

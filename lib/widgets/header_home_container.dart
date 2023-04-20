@@ -79,7 +79,10 @@ class HeaderContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Icon(Icons.location_on),
+              Icon(
+                Icons.location_on,
+                color: Colors.white,
+              ),
               Text("87 Galvihara Rd, Dehiwala-Mount Lavinia",
                   style: TextStyle(fontSize: 15, color: kWhite))
             ],
@@ -87,7 +90,11 @@ class HeaderContainer extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text("chnage", style: TextStyle(fontSize: 13, color: kWhite)),
+              Text("Change",
+                  style: TextStyle(
+                      fontSize: 13,
+                      color: kWhite,
+                      fontWeight: FontWeight.bold)),
             ],
           ),
         ],
