@@ -14,7 +14,7 @@ class ChatScreen extends StatelessWidget {
         children: [
           ChatNotifiCard(
             chatpharmacyname: "CN Pharmacy",
-            chattime: "Mar 20",
+            chattime: "Mar 21",
             chatpharmacylogo: Image.asset("assets/images/phr1.png"),
           ),
           const SizedBox(
