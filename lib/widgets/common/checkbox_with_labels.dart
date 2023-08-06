@@ -1,4 +1,5 @@
 import 'package:capsule_patient/constants/colors.dart';
+import 'package:capsule_patient/utils/screen_size.dart';
 import 'package:flutter/material.dart';
 
 class CheckBoxWithLabels extends StatefulWidget {
@@ -40,7 +41,7 @@ class _CheckBoxWithLabelsState extends State<CheckBoxWithLabels> {
       ),
       Text(
         widget.label,
-        style: const TextStyle(fontSize: 15),
+        style: TextStyle(fontSize: ScreenSize.getResponsiveFontSize(13)),
       ),
     ]);
   }

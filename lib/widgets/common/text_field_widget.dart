@@ -1,4 +1,5 @@
 import 'package:capsule_patient/constants/colors.dart';
+import 'package:capsule_patient/utils/screen_size.dart';
 import 'package:flutter/material.dart';
 
 class TextFormFieldWidget extends StatefulWidget {
@@ -41,7 +42,10 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
       children: [
         Text(
           widget.label,
-          style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w300),
+          style: TextStyle(
+            fontSize: ScreenSize.getResponsiveFontSize(14),
+            fontWeight: FontWeight.w300,
+          ),
         ),
         const SizedBox(height: 5),
         TextFormField(

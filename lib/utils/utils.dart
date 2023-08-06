@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screen_size.dart';
+
 class Utils {
   static void showSnackBar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -7,6 +9,12 @@ class Utils {
         content: Text(reBuildExceptionMessage(message)),
         duration: const Duration(seconds: 5),
       ),
+    );
+  }
+
+  static SizedBox seperatorWidget({double heightRatio = 1}) {
+    return SizedBox(
+      height: ScreenSize.height * 0.01 * heightRatio,
     );
   }
 

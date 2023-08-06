@@ -9,4 +9,8 @@ class ScreenSize {
 
   static get height => _screenSize.height;
   static get width => _screenSize.width;
+
+  static double getResponsiveFontSize(double fontSize) {
+    return fontSize * width / 375.0;
+  }
 }

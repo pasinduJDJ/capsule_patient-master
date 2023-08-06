@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../utils/screen_size.dart';
+import '../utils/utils.dart';
 import '../widgets/common/checkbox_with_labels.dart';
 import '../widgets/common/primary_button_widget.dart';
 import '../widgets/common/text_field_widget.dart';
@@ -18,145 +19,145 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SingleChildScrollView(
-      // padding: const EdgeInsets.symmetric(vertical: 20),
-      child: Column(
-        children: [
-          Row(children: [
-            Container(
-              width: ScreenSize.width / 1.5,
-              height: ScreenSize.height * 0.3,
-              decoration: const BoxDecoration(
-                  // borderRadius: BorderRadius.circular(80),
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/blueDesign.png"))),
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image(
+              image: const AssetImage("assets/images/blueDesign.png"),
+              width: ScreenSize.width * 0.65,
             ),
-          ]),
-          Center(
-            child: SizedBox(
-              width: ScreenSize.width * 0.8,
+            Container(
+              alignment: Alignment.center,
+              padding:
+                  EdgeInsets.symmetric(horizontal: ScreenSize.width * 0.07),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                  Utils.seperatorWidget(heightRatio: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
-                        "Sign up with Google",
-                        style: TextStyle(fontSize: 12),
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      SizedBox(
-                        width: 30,
-                        height: 30,
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage("assets/images/google_logo.png"),
-                          radius: 100,
-                        ),
+                      signupWithGoogle(),
+                      const Stack(
+                        children: [
+                          CircleAvatar(
+                            backgroundImage: AssetImage(
+                                "assets/images/ProfilePicture_1.png"),
+                            radius: 30,
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: CircleAvatar(
+                              radius: 10,
+                              child: Center(
+                                child: Icon(
+                                  Icons.edit,
+                                  size: 10,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 15,
-                  ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      SizedBox(
-                        width: 50,
-                        height: 50,
-                        child: CircleAvatar(
-                          backgroundImage:
-                              AssetImage("assets/images/ProfilePicture_1.png"),
-                          radius: 100,
-                        ),
-                      ),
-                    ],
-                  ),
+                  Utils.seperatorWidget(),
                   const TextFormFieldWidget(
                     label: "First name",
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  Utils.seperatorWidget(),
                   const TextFormFieldWidget(
                     label: "Last name",
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  Utils.seperatorWidget(),
                   const TextFormFieldWidget(
                     label: "Mobile number",
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  Utils.seperatorWidget(),
                   const TextFormFieldWidget(
                     label: "Password",
                     isPassword: true,
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  Utils.seperatorWidget(),
                   const TextFormFieldWidget(
-                    label: "Confoirm Password",
+                    label: "Confirm Password",
                     isPassword: true,
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  Utils.seperatorWidget(heightRatio: 2),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text("Already have an account ?"),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginScreen()),
+                              );
+                            },
+                            child: const Text(
+                              " Sign In",
+                              style: TextStyle(
+                                color: kPrimaryColor,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                       PrimaryButtonWidget(
-                        width: ScreenSize.width / 5,
+                        width: ScreenSize.width * 0.3,
                         height: ScreenSize.height * 0.04,
                         text: "Next",
                         ontap: () {
                           showDialog(
-                              context: context,
-                              builder: (context) => const OtpConfoirmMsg(
-                                    mobilenumber: 767066455,
-                                  ));
+                            context: context,
+                            builder: (context) => const OtpConfoirmMsg(
+                              mobilenumber: 767066455,
+                            ),
+                          );
                         },
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text("Already have an account ? "),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const LoginScreen()),
-                            );
-                          },
-                          child: const Text(
-                            "  Sign In",
-                            style: TextStyle(color: kPrimaryColor),
-                          ))
-                    ],
-                  ),
                 ],
               ),
-            ),
-          )
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  GestureDetector signupWithGoogle() {
+    return GestureDetector(
+      onTap: () {},
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text(
+            "Sign up with Google",
+            style: TextStyle(fontSize: 12),
+          ),
+          SizedBox(
+            width: 5,
+          ),
+          CircleAvatar(
+            backgroundImage: AssetImage("assets/images/google_logo.png"),
+            radius: 20,
+          ),
         ],
       ),
-    ));
+    );
   }
 }
 
-////////////////////////////////Otp Confoirm Msg
 class OtpConfoirmMsg extends StatelessWidget {
   const OtpConfoirmMsg({super.key, required this.mobilenumber});
 
@@ -169,112 +170,119 @@ class OtpConfoirmMsg extends StatelessWidget {
         "OTP Confirmation",
         textAlign: TextAlign.center,
       ),
-      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 40),
-      content: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        height: ScreenSize.height / 2.9,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const TextFormFieldWidget(
-              label: "Enter OTP No",
+      content: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const TextFormFieldWidget(
+            label: "Enter OTP No",
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          const Flexible(
+            child: Text(
+              "You will receive an OTP  to your email  and phone number",
+              style: TextStyle(fontSize: 10, color: Colors.black38),
             ),
-            const SizedBox(
-              height: 5,
-            ),
-            const Flexible(
-              child: Text(
-                "You will receive an OTP  to your email  and phone number",
-                style: TextStyle(fontSize: 10, color: Colors.black38),
-              ),
-            ),
-            const SizedBox(
-              height: 18,
-            ),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    "Mobile number",
-                    style: TextStyle(fontSize: 10),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  Text(
-                    "+94$mobilenumber",
-                    style: const TextStyle(fontSize: 10),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                  const Text(
-                    "change",
-                    style: TextStyle(fontSize: 10, color: Colors.blue),
-                  ),
-                  const SizedBox(
-                    height: 5,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Resend OTP in ",
-                  style: TextStyle(fontSize: 10),
+          ),
+          const SizedBox(
+            height: 18,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Mobile number",
+                style: TextStyle(
+                  fontSize: ScreenSize.getResponsiveFontSize(11),
                 ),
-                SizedBox(
-                  width: 6,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                "+94$mobilenumber",
+                style: TextStyle(
+                  fontSize: ScreenSize.getResponsiveFontSize(11),
                 ),
-                Text(
-                  "00:58",
-                  style: TextStyle(fontSize: 10),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            CheckBoxWithLabels(
-              onRememberCheck: ((isChecked) =>
-                  debugPrint(isChecked.toString())),
-              label: "I  Accept Terms and Conditions",
-            ),
-            Row(
-              children: [
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const LoginScreen()),
-                      );
-                    },
-                    child: const Text(
-                      "Go back to login",
-                      style: TextStyle(color: kPrimaryColor, fontSize: 12),
-                    )),
-                const Spacer(),
-                PrimaryButtonWidget(
-                  text: "Finish",
-                  height: 30,
-                  ontap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const Home()));
-                  },
-                )
-              ],
-            )
-          ],
-        ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                "Change",
+                style: TextStyle(
+                  fontSize: ScreenSize.getResponsiveFontSize(11),
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Utils.seperatorWidget(heightRatio: 0.5),
+            ],
+          ),
+          Utils.seperatorWidget(heightRatio: 1.5),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Resend OTP in ",
+                style: TextStyle(
+                  fontSize: ScreenSize.getResponsiveFontSize(12),
+                ),
+              ),
+              const SizedBox(
+                width: 6,
+              ),
+              Text(
+                "00:58",
+                style: TextStyle(
+                  fontSize: ScreenSize.getResponsiveFontSize(12),
+                ),
+              )
+            ],
+          ),
+          Utils.seperatorWidget(heightRatio: 1.5),
+          CheckBoxWithLabels(
+            onRememberCheck: ((isChecked) => debugPrint(isChecked.toString())),
+            label: "I  Accept Terms and Conditions",
+          ),
+        ],
       ),
+      actions: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            children: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginScreen()),
+                    );
+                  },
+                  child: Text(
+                    "Go back to login",
+                    style: TextStyle(
+                      color: kPrimaryColor,
+                      fontSize: ScreenSize.getResponsiveFontSize(11),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )),
+              const Spacer(),
+              PrimaryButtonWidget(
+                text: "Finish",
+                height: 30,
+                ontap: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => const Home()));
+                },
+              )
+            ],
+          ),
+        )
+      ],
     );
   }
 }
