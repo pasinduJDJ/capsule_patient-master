@@ -1,6 +1,8 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class MedicienOrEquipmentContainer extends StatelessWidget {
   const MedicienOrEquipmentContainer({
     super.key,
@@ -11,7 +13,7 @@ class MedicienOrEquipmentContainer extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 10),
-        width: MediaQuery.of(context).size.width * 0.9,
+        width: ScreenSize.width * 0.9,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -65,7 +67,7 @@ class MediceneSearchCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
-      height: MediaQuery.of(context).size.height * 0.17,
+      height: ScreenSize.height * 0.17,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20)),
         color: kWhite,

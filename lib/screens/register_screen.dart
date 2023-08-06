@@ -1,10 +1,11 @@
-import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/screens/home.dart';
-import 'package:capsule_patient/screens/login_screen.dart';
 import 'package:flutter/material.dart';
+import '../constants/colors.dart';
+import '../utils/screen_size.dart';
 import '../widgets/common/checkbox_with_labels.dart';
 import '../widgets/common/primary_button_widget.dart';
 import '../widgets/common/text_field_widget.dart';
+import 'home.dart';
+import 'login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -23,8 +24,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
         children: [
           Row(children: [
             Container(
-              width: MediaQuery.of(context).size.width / 1.5,
-              height: MediaQuery.of(context).size.height * 0.3,
+              width: ScreenSize.width / 1.5,
+              height: ScreenSize.height * 0.3,
               decoration: const BoxDecoration(
                   // borderRadius: BorderRadius.circular(80),
                   image: DecorationImage(
@@ -33,7 +34,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ]),
           Center(
             child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.8,
+              width: ScreenSize.width * 0.8,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -111,8 +112,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       PrimaryButtonWidget(
-                        width: MediaQuery.of(context).size.width / 5,
-                        height: MediaQuery.of(context).size.height * 0.04,
+                        width: ScreenSize.width / 5,
+                        height: ScreenSize.height * 0.04,
                         text: "Next",
                         ontap: () {
                           showDialog(
@@ -164,10 +165,14 @@ class OtpConfoirmMsg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: const Text("OTP Confirmation"),
+      title: const Text(
+        "OTP Confirmation",
+        textAlign: TextAlign.center,
+      ),
       contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 40),
-      content: SizedBox(
-        height: MediaQuery.of(context).size.height / 2.9,
+      content: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        height: ScreenSize.height / 2.9,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

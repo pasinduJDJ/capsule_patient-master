@@ -2,6 +2,8 @@ import 'package:capsule_patient/constants/colors.dart';
 import 'package:capsule_patient/screens/customer_chat_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class ChatNotifiCard extends StatelessWidget {
   const ChatNotifiCard({
     super.key,
@@ -28,8 +30,8 @@ class ChatNotifiCard extends StatelessWidget {
         );
       },
       child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height / 11,
+        width: ScreenSize.width,
+        height: ScreenSize.height / 11,
         color: kWhite,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -1,6 +1,8 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({
     super.key,
@@ -31,8 +33,8 @@ class ProfileScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
-              width: MediaQuery.of(context).size.width * 0.85,
-              height: MediaQuery.of(context).size.height / 6.5,
+              width: ScreenSize.width * 0.85,
+              height: ScreenSize.height / 6.5,
               decoration: const BoxDecoration(
                   color: kWhite,
                   borderRadius: BorderRadius.all(Radius.circular(60))),
@@ -71,8 +73,8 @@ class ProfileScreen extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-              width: MediaQuery.of(context).size.width * 0.85,
-              height: MediaQuery.of(context).size.height / 2.5,
+              width: ScreenSize.width * 0.85,
+              height: ScreenSize.height / 2.5,
               decoration: const BoxDecoration(
                   color: kWhite,
                   borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -198,8 +200,8 @@ class ProfileScreen extends StatelessWidget {
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 14),
-              width: MediaQuery.of(context).size.width * 0.85,
-              height: MediaQuery.of(context).size.height / 7,
+              width: ScreenSize.width * 0.85,
+              height: ScreenSize.height / 7,
               decoration: const BoxDecoration(
                   color: kWhite,
                   borderRadius: BorderRadius.all(Radius.circular(30))),

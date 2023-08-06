@@ -2,6 +2,8 @@ import 'package:capsule_patient/constants/colors.dart';
 import 'package:capsule_patient/widgets/popup_upload_prescription.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class HeaderContainer extends StatelessWidget {
   const HeaderContainer({
     super.key,
@@ -10,8 +12,8 @@ class HeaderContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 3.4,
+      width: ScreenSize.width,
+      height: ScreenSize.height / 3.4,
       decoration: const BoxDecoration(
           color: kPrimaryColor,
           borderRadius: BorderRadius.only(
@@ -57,8 +59,8 @@ class HeaderContainer extends StatelessWidget {
             color: kSecondaryColor,
             borderRadius: BorderRadius.circular(10),
             child: SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.06,
+              width: ScreenSize.width,
+              height: ScreenSize.height * 0.06,
               child: MaterialButton(
                 materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 onPressed: () {

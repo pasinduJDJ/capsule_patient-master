@@ -2,6 +2,8 @@ import 'package:capsule_patient/constants/colors.dart';
 import 'package:capsule_patient/widgets/common/primary_button_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class NotificationCard extends StatelessWidget {
   const NotificationCard({
     super.key,
@@ -22,14 +24,14 @@ class NotificationCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       // padding: EdgeInsets.symmetric(vertical: 10),
-      width: MediaQuery.of(context).size.width * 0.9,
-      height: MediaQuery.of(context).size.height * 0.15,
+      width: ScreenSize.width * 0.9,
+      height: ScreenSize.height * 0.15,
       decoration: const BoxDecoration(
           color: kWhite, borderRadius: BorderRadius.all(Radius.circular(10))),
       child: Column(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.08,
+            height: ScreenSize.height * 0.08,
             decoration: const BoxDecoration(
                 color: kSecondaryColor,
                 borderRadius: BorderRadius.all(Radius.circular(10))),
@@ -73,7 +75,7 @@ class NotificationCard extends StatelessWidget {
             height: 8,
           ),
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.04,
+            height: ScreenSize.height * 0.04,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [

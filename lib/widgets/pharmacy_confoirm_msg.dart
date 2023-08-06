@@ -1,6 +1,8 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class PharmacyConfoirmMsgCard extends StatelessWidget {
   const PharmacyConfoirmMsgCard({
     super.key,
@@ -24,7 +26,7 @@ class PharmacyConfoirmMsgCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width / 1.3,
+      width: ScreenSize.width / 1.3,
       decoration: BoxDecoration(
         color: kPrimaryColor,
         borderRadius: BorderRadius.circular(10),

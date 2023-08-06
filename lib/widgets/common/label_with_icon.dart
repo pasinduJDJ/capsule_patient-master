@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
+import '../../utils/screen_size.dart';
+
 class LabelWithIcon extends StatelessWidget {
   const LabelWithIcon({
     super.key,
@@ -12,7 +14,7 @@ class LabelWithIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: ScreenSize.width,
       padding: const EdgeInsets.symmetric(horizontal: 35, vertical: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

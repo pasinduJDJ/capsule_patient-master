@@ -5,6 +5,8 @@ import 'package:capsule_patient/widgets/medicine_or_eqipment_container.dart';
 import 'package:capsule_patient/widgets/pharmacy_confoirm_msg.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -68,8 +70,8 @@ class PharmacyReplyContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       // margin: const EdgeInsets.symmetric(horizontal: 10),
-      width: MediaQuery.of(context).size.width,
-      height: MediaQuery.of(context).size.height / 5,
+      width: ScreenSize.width,
+      height: ScreenSize.height / 5,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: [

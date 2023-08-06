@@ -1,5 +1,3 @@
-import 'package:capsule_patient/screens/home.dart';
-import 'package:capsule_patient/screens/register_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +6,8 @@ import '../utils/screen_size.dart';
 import '../widgets/common/checkbox_with_labels.dart';
 import '../widgets/common/primary_button_widget.dart';
 import '../widgets/common/text_field_widget.dart';
+import 'home.dart';
+import 'register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -29,17 +29,19 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Row(children: [
-              Container(
-                width: MediaQuery.of(context).size.width / 1.4,
-                height: MediaQuery.of(context).size.height * 0.4,
-                decoration: const BoxDecoration(
-                    // borderRadius: BorderRadius.circular(80),
+            Row(
+              children: [
+                Container(
+                  width: ScreenSize.width / 1.4,
+                  height: ScreenSize.height * 0.4,
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
-                        image:
-                            AssetImage("assets/images/blueDesignSignIn.png"))),
-              ),
-            ]),
+                      image: AssetImage("assets/images/blueDesignSignIn.png"),
+                    ),
+                  ),
+                ),
+              ],
+            ),
             Container(
               width: ScreenSize.width,
               padding: const EdgeInsets.symmetric(horizontal: 30),

@@ -4,6 +4,8 @@ import 'package:capsule_patient/widgets/drawer_widget.dart';
 import 'package:capsule_patient/widgets/notification_card.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({super.key});
 
@@ -15,7 +17,7 @@ class NotificationScreen extends StatelessWidget {
         title: 'Notification',
       ),
       body: Container(
-        width: MediaQuery.of(context).size.width,
+        width: ScreenSize.width,
         color: scaffoldBackground,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

@@ -2,6 +2,8 @@ import 'package:capsule_patient/widgets/common/primary_button_widget.dart';
 import 'package:capsule_patient/widgets/common/text_field_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class PopupUploadPrescription extends StatelessWidget {
   const PopupUploadPrescription({
     super.key,
@@ -13,7 +15,7 @@ class PopupUploadPrescription extends StatelessWidget {
       title: const Text("Prescription Submittion"),
       content: SingleChildScrollView(
         child: Container(
-          width: MediaQuery.of(context).size.width,
+          width: ScreenSize.width,
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(60))),
           child: const Column(

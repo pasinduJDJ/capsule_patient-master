@@ -1,6 +1,8 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
 
+import '../utils/screen_size.dart';
+
 class SearchResaultScreen extends StatelessWidget {
   const SearchResaultScreen({
     super.key,
@@ -33,15 +35,15 @@ class SearchResaultScreen extends StatelessWidget {
       body: Container(
         color: scaffoldBackground,
         padding: const EdgeInsets.all(10),
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height,
+        width: ScreenSize.width,
+        height: ScreenSize.height,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             ////////////////////////////////////////////////////////medicine Image Container
             Container(
-              width: MediaQuery.of(context).size.width * 0.95,
-              height: MediaQuery.of(context).size.height / 2.5,
+              width: ScreenSize.width * 0.95,
+              height: ScreenSize.height / 2.5,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: kblack,
@@ -52,7 +54,7 @@ class SearchResaultScreen extends StatelessWidget {
             /////////////////////////////////////////////////////// Description Container
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              width: MediaQuery.of(context).size.width,
+              width: ScreenSize.width,
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
