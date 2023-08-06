@@ -44,9 +44,9 @@ class HeaderContainer extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text("OR", style: TextStyle(fontSize: 10, color: kWhite))
             ],
           ),
@@ -76,9 +76,9 @@ class HeaderContainer extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Icon(
                 Icons.location_on,
                 color: Colors.white,
@@ -87,9 +87,9 @@ class HeaderContainer extends StatelessWidget {
                   style: TextStyle(fontSize: 15, color: kWhite))
             ],
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
+            children: [
               Text("Change",
                   style: TextStyle(
                       fontSize: 13,

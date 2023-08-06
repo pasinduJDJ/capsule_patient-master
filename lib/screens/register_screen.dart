@@ -37,9 +37,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         "Sign up with Google",
                         style: TextStyle(fontSize: 12),
@@ -61,9 +61,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   const SizedBox(
                     height: 15,
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
+                    children: [
                       SizedBox(
                         width: 50,
                         height: 50,
@@ -218,9 +218,9 @@ class OtpConfoirmMsg extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Text(
                   "Resend OTP in ",
                   style: TextStyle(fontSize: 10),

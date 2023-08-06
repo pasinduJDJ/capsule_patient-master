@@ -9,12 +9,12 @@ class SearchScreens extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: scaffoldBackground,
-      child: Column(
+      child: const Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
+            children: [
               TextButton(
                   onPressed: null,
                   child: Text(
@@ -29,7 +29,7 @@ class SearchScreens extends StatelessWidget {
                   ))
             ],
           ),
-          const MedicienOrEquipmentContainer(),
+          MedicienOrEquipmentContainer(),
         ],
       ),
     );

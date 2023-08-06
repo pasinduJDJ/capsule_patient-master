@@ -13,22 +13,22 @@ class HomeScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         color: scaffoldBackground,
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const HeaderContainer(),
-            const LabelWithIcon(
+            HeaderContainer(),
+            LabelWithIcon(
               icon: Icon(Icons.more_horiz_rounded),
               label: "Pharmacy Near You",
             ),
-            const PharmacyReplyContainer(),
-            const LabelWithIcon(
+            PharmacyReplyContainer(),
+            LabelWithIcon(
               icon: Icon(Icons.access_time),
               label: "Top Searches",
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
+              children: [
                 TextButton(
                   onPressed: null,
                   child: Text(
@@ -45,10 +45,10 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(
+            SizedBox(
               height: 10,
             ),
-            const MedicienOrEquipmentContainer(),
+            MedicienOrEquipmentContainer(),
             // popupUploadPrescription()
           ],
         ),

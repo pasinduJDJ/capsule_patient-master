@@ -59,7 +59,7 @@ class SearchResaultScreen extends StatelessWidget {
                     topRight: Radius.circular(30)),
                 color: kWhite,
               ),
-              child: Column(
+              child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     //////////////////////// medicine details(name, price,quantity)
@@ -67,7 +67,7 @@ class SearchResaultScreen extends StatelessWidget {
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
+                          children: [
                             //////////medicine name
                             Text(
                               "Paracetamol 500g",
@@ -75,9 +75,9 @@ class SearchResaultScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Spacer(),
+                        Spacer(),
                         Column(
-                          children: const [
+                          children: [
                             Icon(
                               Icons.bookmark_outline,
                               size: 20,
@@ -87,47 +87,47 @@ class SearchResaultScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 25,
                     ),
                     //////////////////////////////// medicine main Details
-                    const Text(
+                    Text(
                       "Description",
                       style: TextStyle(fontSize: 16),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
                     /////////////////////////////////////////////////medicine Description
-                    const Text(
+                    Text(
                         "Paracetamol, also known as acetaminophen or para-hydroxyacetanilide, is a medication used to treat fever and mild to moderate pain. Common brand names include Tylenol and Panadol."),
-                    const SizedBox(
+                    SizedBox(
                       height: 10,
                     ),
-                    const Text(
+                    Text(
                       "Side Effects",
                       style: TextStyle(fontSize: 16),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
                     /////////////////////////////////////////////////medicine Side effect
-                    const Text(
+                    Text(
                         "an allergic reaction, which can cause a rash and swelling"),
-                    const Text(
+                    Text(
                         "liver and kidney damage, if you take too much (overdose) – this can be fatal in severe cases"),
-                    const SizedBox(
+                    SizedBox(
                       height: 10,
                     ),
-                    const Text(
+                    Text(
                       "How to take",
                       style: TextStyle(fontSize: 16),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 5,
                     ),
                     /////////////////////////////////////////////////medicine How to Take
-                    const Text(
+                    Text(
                         "Adults can usually take 1 or 2 tablets (500mg) every 4-6 hours"),
                   ]),
             ),

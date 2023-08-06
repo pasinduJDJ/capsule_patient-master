@@ -16,10 +16,10 @@ class PopupUploadPrescription extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(60))),
-          child: Column(
+          child: const Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [
+            children: [
               TextFormFieldWidget(
                 label: "Prescription",
               ),
