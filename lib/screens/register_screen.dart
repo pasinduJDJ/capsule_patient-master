@@ -92,20 +92,27 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text("Already have an account ?"),
+                          Text(
+                            "Already have an account ?",
+                            style: TextStyle(
+                              fontSize: ScreenSize.getResponsiveFontSize(15),
+                            ),
+                          ),
                           GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const LoginScreen()),
+                                  builder: (context) => const LoginScreen(),
+                                ),
                               );
                             },
-                            child: const Text(
+                            child: Text(
                               " Sign In",
                               style: TextStyle(
                                 color: kPrimaryColor,
                                 fontWeight: FontWeight.bold,
+                                fontSize: ScreenSize.getResponsiveFontSize(15),
                               ),
                             ),
                           )
@@ -138,17 +145,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
   GestureDetector signupWithGoogle() {
     return GestureDetector(
       onTap: () {},
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(
             "Sign up with Google",
-            style: TextStyle(fontSize: 12),
+            style: TextStyle(
+              fontSize: ScreenSize.getResponsiveFontSize(13),
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
-          CircleAvatar(
+          const CircleAvatar(
             backgroundImage: AssetImage("assets/images/google_logo.png"),
             radius: 20,
           ),
@@ -245,7 +254,7 @@ class OtpConfoirmMsg extends StatelessWidget {
           Utils.seperatorWidget(heightRatio: 1.5),
           CheckBoxWithLabels(
             onRememberCheck: ((isChecked) => debugPrint(isChecked.toString())),
-            label: "I  Accept Terms and Conditions",
+            label: "I Accept Terms and Conditions",
           ),
         ],
       ),
@@ -276,7 +285,11 @@ class OtpConfoirmMsg extends StatelessWidget {
                 height: 30,
                 ontap: () {
                   Navigator.push(
-                      context, MaterialPageRoute(builder: (_) => const Home()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const Home(),
+                    ),
+                  );
                 },
               )
             ],

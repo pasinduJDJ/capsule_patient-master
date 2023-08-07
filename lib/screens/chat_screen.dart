@@ -1,6 +1,6 @@
-import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/widgets/chat_notifi_card.dart';
 import 'package:flutter/material.dart';
+import '../constants/colors.dart';
+import '../widgets/chat_notifi_card.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});

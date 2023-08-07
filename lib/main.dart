@@ -1,8 +1,8 @@
-import 'package:capsule_patient/providers/providers.dart';
-import 'package:capsule_patient/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'providers/providers.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(
