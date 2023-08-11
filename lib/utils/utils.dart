@@ -19,7 +19,7 @@ class Utils {
 
   static SizedBox seperatorHWidget({double widthRatio = 1}) {
     return SizedBox(
-      height: ScreenSize.width * 0.03 * widthRatio,
+      width: ScreenSize.width * 0.03 * widthRatio,
     );
   }
 

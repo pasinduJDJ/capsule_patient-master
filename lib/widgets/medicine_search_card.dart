@@ -22,7 +22,6 @@ class MedicineSearchCard extends StatelessWidget {
         color: kWhite,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.only(
@@ -31,7 +30,6 @@ class MedicineSearchCard extends StatelessWidget {
             ),
             child: Container(
               width: ScreenSize.width * 0.3,
-              height: ScreenSize.height * 0.17,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(medicine.medicineImage),
@@ -40,41 +38,50 @@ class MedicineSearchCard extends StatelessWidget {
               ),
             ),
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                "Medicine name",
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
-              ),
-              Text(
-                medicine.name,
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              Utils.seperatorWidget(),
-              const Text(
-                "Usage",
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
-              ),
-              Flexible(
-                child: Text(
-                  medicine.usage,
-                  style: const TextStyle(fontSize: 11),
+          Utils.seperatorHWidget(),
+          Container(
+            padding: const EdgeInsets.all(5),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Medicine name",
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.normal,
+                  ),
                 ),
-              ),
-              Utils.seperatorWidget(),
-              const Text(
-                "Pharmacy",
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
-              ),
-              Text(
-                medicine.pharmacy?.pharmacyName ?? '',
-                style:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-            ],
+                Text(
+                  medicine.name,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Utils.seperatorWidget(),
+                const Text(
+                  "Usage",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+                ),
+                Flexible(
+                  child: Text(
+                    medicine.usage,
+                    style: const TextStyle(fontSize: 11),
+                  ),
+                ),
+                Utils.seperatorWidget(),
+                const Text(
+                  "Pharmacy",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+                ),
+                Text(
+                  medicine.pharmacy?.pharmacyName ?? '',
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
           )
         ],
       ),
