@@ -99,7 +99,7 @@ class _ChatDetalsScreenState extends State<ChatDetalsScreen> {
           if (chat.isResponse)
             const CircleAvatar(
               radius: 20,
-              backgroundImage: AssetImage("assets/images/user.png"),
+              backgroundImage: AssetImage("assets/images/person1.png"),
             ),
           if (chat.isResponse) const SizedBox(width: 10),
           Flexible(
@@ -137,7 +137,7 @@ class _ChatDetalsScreenState extends State<ChatDetalsScreen> {
           if (!chat.isResponse)
             const CircleAvatar(
               radius: 20,
-              backgroundImage: AssetImage("assets/images/user.png"),
+              backgroundImage: AssetImage("assets/images/person2.png"),
             ),
         ],
       ),

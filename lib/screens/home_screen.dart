@@ -7,7 +7,7 @@ import '../models/pharmacy.dart';
 import '../utils/screen_size.dart';
 import '../widgets/header_home_container.dart';
 import '../widgets/medicine_search_card.dart';
-import '../widgets/pharmacy_confoirm_msg.dart';
+import '../widgets/pharmacy_confirm_msg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
             const HeaderContainer(),
             labelWithIcon("Pharmacy Near You", Icons.more_horiz_rounded),
             const PharmacyReplyContainer(),
+            Utils.seperatorWidget(),
             labelWithIcon("Top Searches", Icons.access_time),
             const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

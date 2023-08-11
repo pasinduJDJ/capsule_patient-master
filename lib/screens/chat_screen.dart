@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../constants/colors.dart';
 import '../widgets/chat_notifi_card.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -7,8 +6,8 @@ class ChatScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: scaffoldBackground,
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

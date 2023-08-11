@@ -1,12 +1,14 @@
-import 'package:capsule_patient/providers/home_provider.dart';
-import 'package:capsule_patient/screens/chat_screen.dart';
-import 'package:capsule_patient/screens/home_screen.dart';
-import 'package:capsule_patient/screens/profile_screen.dart';
-import 'package:capsule_patient/screens/search_screen.dart';
-import 'package:capsule_patient/widgets/app_bar_widget.dart';
-import 'package:capsule_patient/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import '../constants/colors.dart';
+import '../providers/home_provider.dart';
+import '../widgets/app_bar_widget.dart';
+import '../widgets/drawer_widget.dart';
+import 'chat_screen.dart';
+import 'home_screen.dart';
+import 'profile_screen.dart';
+import 'search_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -46,6 +48,7 @@ class _HomeState extends State<Home> {
     return Consumer<HomeProvider>(
       builder: (context, cHome, child) {
         return Scaffold(
+          backgroundColor: scaffoldBackground,
           drawer: const DrawerWidget(),
           appBar: AppBarWidget(title: screens[cHome.selectedIndex].title),
           bottomNavigationBar: BottomNavigationBar(

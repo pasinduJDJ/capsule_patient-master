@@ -1,27 +1,11 @@
 import 'package:capsule_patient/constants/colors.dart';
 import 'package:flutter/material.dart';
-
 import '../utils/screen_size.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({
     super.key,
-    // required this.userfirstname,
-    // required this.userlastname,
-    // required this.usermobilenumber,
-    // required this.userdb,
-    // required this.userlocation,
-    // required this.useremail,
-    // required this.userpassword
   });
-
-  // final String userfirstname;
-  // final String userlastname;
-  // final String usermobilenumber;
-  // final String userdb;
-  // final String userlocation;
-  // final String useremail;
-  // final String userpassword;
 
   @override
   Widget build(BuildContext context) {

@@ -30,9 +30,13 @@ class ChatNotifiCard extends StatelessWidget {
         );
       },
       child: Container(
+        margin: const EdgeInsets.only(bottom: 5),
+        decoration: BoxDecoration(
+          color: kWhite,
+          borderRadius: BorderRadius.circular(10),
+        ),
         width: ScreenSize.width,
         height: ScreenSize.height / 11,
-        color: kWhite,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -51,7 +55,7 @@ class ChatNotifiCard extends StatelessWidget {
                 Text(
                   chatpharmacyname,
                   style: const TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.bold),
+                      fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 const Text("Give me a some time........")
               ],
@@ -64,6 +68,7 @@ class ChatNotifiCard extends StatelessWidget {
               children: [
                 const Icon(
                   Icons.circle,
+                  color: Colors.green,
                   size: 10,
                 ),
                 const SizedBox(
