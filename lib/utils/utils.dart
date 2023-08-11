@@ -17,6 +17,12 @@ class Utils {
     );
   }
 
+  static SizedBox seperatorHWidget({double widthRatio = 1}) {
+    return SizedBox(
+      height: ScreenSize.width * 0.03 * widthRatio,
+    );
+  }
+
   static String toSnakeCase(String text) {
     return text.split(' ').map((e) => e.toLowerCase()).toList().join('_');
   }

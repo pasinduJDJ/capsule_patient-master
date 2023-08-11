@@ -1,8 +1,10 @@
-import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/widgets/popup_upload_prescription.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../constants/colors.dart';
+import '../providers/home_provider.dart';
 import '../utils/screen_size.dart';
+import 'popup_upload_prescription.dart';
 
 class HeaderContainer extends StatelessWidget {
   const HeaderContainer({
@@ -31,15 +33,22 @@ class HeaderContainer extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          const TextField(
-            decoration: InputDecoration(
+          TextField(
+            onTap: () {
+              context.read<HomeProvider>().changeIndex(1);
+            },
+            readOnly: true,
+            decoration: const InputDecoration(
               isDense: true,
               filled: true,
               fillColor: Colors.white,
               prefixIcon: Icon(Icons.search),
               border: OutlineInputBorder(
-                  borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(Radius.circular(10))),
+                borderSide: BorderSide.none,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
               hintText: 'Enter medical name',
             ),
           ),
@@ -92,11 +101,11 @@ class HeaderContainer extends StatelessWidget {
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Change",
-                  style: TextStyle(
-                      fontSize: 13,
-                      color: kWhite,
-                      fontWeight: FontWeight.bold)),
+              Text(
+                "Change",
+                style: TextStyle(
+                    fontSize: 13, color: kWhite, fontWeight: FontWeight.bold),
+              ),
             ],
           ),
         ],

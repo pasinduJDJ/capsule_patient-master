@@ -3,31 +3,10 @@ import 'package:flutter/material.dart';
 
 import '../utils/screen_size.dart';
 
-class SearchResaultScreen extends StatelessWidget {
-  const SearchResaultScreen({
+class SearchResultScreen extends StatelessWidget {
+  const SearchResultScreen({
     super.key,
-    // required this.medicineimg,
-    // required this.mediniename,
-    // required this.price,
-    // required this.quantity,
-    // required this.pharmacyname,
-    // required this.pharmacylocation,
-    // required this.pharmacylogo,
-    // required this.medicineDescription,
-    // required this.medicineSideAffects,
-    // required this.medicineHowToTake
   });
-
-  // final Image medicineimg;
-  // final String mediniename;
-  // final String price;
-  // final String quantity;
-  // final String pharmacyname;
-  // final String pharmacylocation;
-  // final Image pharmacylogo;
-  // final String medicineDescription;
-  // final String medicineSideAffects;
-  // final String medicineHowToTake;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +19,6 @@ class SearchResaultScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            ////////////////////////////////////////////////////////medicine Image Container
             Container(
               width: ScreenSize.width * 0.95,
               height: ScreenSize.height / 2.5,
@@ -51,7 +29,6 @@ class SearchResaultScreen extends StatelessWidget {
                       image: AssetImage("assets/images/paracetamol-tablet.png"),
                       fit: BoxFit.cover)),
             ),
-            /////////////////////////////////////////////////////// Description Container
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               width: ScreenSize.width,
@@ -64,13 +41,11 @@ class SearchResaultScreen extends StatelessWidget {
               child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    //////////////////////// medicine details(name, price,quantity)
                     Row(
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            //////////medicine name
                             Text(
                               "Paracetamol 500g",
                               style: TextStyle(fontSize: 30),
@@ -92,7 +67,7 @@ class SearchResaultScreen extends StatelessWidget {
                     SizedBox(
                       height: 25,
                     ),
-                    //////////////////////////////// medicine main Details
+
                     Text(
                       "Description",
                       style: TextStyle(fontSize: 16),

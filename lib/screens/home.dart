@@ -1,3 +1,4 @@
+import 'package:capsule_patient/providers/home_provider.dart';
 import 'package:capsule_patient/screens/chat_screen.dart';
 import 'package:capsule_patient/screens/home_screen.dart';
 import 'package:capsule_patient/screens/profile_screen.dart';
@@ -5,6 +6,7 @@ import 'package:capsule_patient/screens/search_screen.dart';
 import 'package:capsule_patient/widgets/app_bar_widget.dart';
 import 'package:capsule_patient/widgets/drawer_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -14,7 +16,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     List<BottomNavigationBarItem> bottomNavigationBarItems = [
@@ -42,17 +43,21 @@ class _HomeState extends State<Home> {
       ScreenItem(title: "Chat", screenWidget: const ChatScreen()),
       ScreenItem(title: "Profile", screenWidget: const ProfileScreen()),
     ];
-    return Scaffold(
-      drawer: const DrawerWidget(),
-      appBar: AppBarWidget(title: screens[_selectedIndex].title),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        selectedItemColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Colors.black,
-        items: bottomNavigationBarItems,
-        onTap: (index) => setState(() => _selectedIndex = index),
-      ),
-      body: screens[_selectedIndex].screenWidget,
+    return Consumer<HomeProvider>(
+      builder: (context, cHome, child) {
+        return Scaffold(
+          drawer: const DrawerWidget(),
+          appBar: AppBarWidget(title: screens[cHome.selectedIndex].title),
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: cHome.selectedIndex,
+            selectedItemColor: Theme.of(context).primaryColor,
+            unselectedItemColor: Colors.black,
+            items: bottomNavigationBarItems,
+            onTap: (index) => cHome.changeIndex(index),
+          ),
+          body: screens[cHome.selectedIndex].screenWidget,
+        );
+      },
     );
   }
 }

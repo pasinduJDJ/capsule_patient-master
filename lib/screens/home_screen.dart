@@ -1,11 +1,13 @@
 import 'package:capsule_patient/constants/colors.dart';
-import 'package:capsule_patient/widgets/common/label_with_icon.dart';
-import 'package:capsule_patient/widgets/header_home_container.dart';
-import 'package:capsule_patient/widgets/medicine_or_eqipment_container.dart';
-import 'package:capsule_patient/widgets/pharmacy_confoirm_msg.dart';
+import 'package:capsule_patient/utils/utils.dart';
 import 'package:flutter/material.dart';
 
+import '../models/medicine.dart';
+import '../models/pharmacy.dart';
 import '../utils/screen_size.dart';
+import '../widgets/header_home_container.dart';
+import '../widgets/medicine_search_card.dart';
+import '../widgets/pharmacy_confoirm_msg.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,20 +17,14 @@ class HomeScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         color: scaffoldBackground,
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            HeaderContainer(),
-            LabelWithIcon(
-              icon: Icon(Icons.more_horiz_rounded),
-              label: "Pharmacy Near You",
-            ),
-            PharmacyReplyContainer(),
-            LabelWithIcon(
-              icon: Icon(Icons.access_time),
-              label: "Top Searches",
-            ),
-            Row(
+            const HeaderContainer(),
+            labelWithIcon("Pharmacy Near You", Icons.more_horiz_rounded),
+            const PharmacyReplyContainer(),
+            labelWithIcon("Top Searches", Icons.access_time),
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextButton(
@@ -47,11 +43,25 @@ class HomeScreen extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
-              height: 10,
+            Utils.seperatorWidget(),
+            Container(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                children: List.generate(
+                  3,
+                  (index) => MedicineSearchCard(
+                    medicine: Medicine(
+                      medicineImage: "assets/images/paracetamol-tablet.png",
+                      name: "Paracetamol 500g",
+                      usage: "treat pain and reduce a high temperature (fever)",
+                      pharmacy: Pharmacy(
+                        pharmacyName: "HealthCare ",
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ),
-            MedicienOrEquipmentContainer(),
-            // popupUploadPrescription()
           ],
         ),
       ),
@@ -59,7 +69,22 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-/////////////////////////////////////////////////////////////////// Replay Container ///////
+Widget labelWithIcon(String label, IconData icon) {
+  return Container(
+    width: ScreenSize.width,
+    padding: const EdgeInsets.all(15),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          label,
+          style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+        ),
+        Icon(icon)
+      ],
+    ),
+  );
+}
 
 class PharmacyReplyContainer extends StatelessWidget {
   const PharmacyReplyContainer({
@@ -69,15 +94,12 @@ class PharmacyReplyContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      // margin: const EdgeInsets.symmetric(horizontal: 10),
       width: ScreenSize.width,
       height: ScreenSize.height / 5,
       child: ListView(
+        padding: EdgeInsets.only(left: ScreenSize.width * 0.03),
         scrollDirection: Axis.horizontal,
         children: [
-          const SizedBox(
-            width: 10,
-          ),
           PharmacyConfoirmMsgCard(
             pharmacyname: "CN Pharmacy",
             pharmacylocation: "Ward PI,Colombo",
