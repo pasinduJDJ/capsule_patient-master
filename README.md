@@ -33,7 +33,4 @@ This is the source code for Flutter Capsule Finding App with its cool functional
 ![Screenshot 2024-05-01 231030](https://github.com/pasinduJDJ/capsule_patient-master/assets/88645734/b101e9d2-e1e1-4d35-9ff6-6eaadb509818)
 
 
-## Screenshots
-
-![App Screenshot](https://drive.google.com/drive/folders/1qWYegCllQT6TlLW6ME9ymg_p4x2tPw2P)
 
