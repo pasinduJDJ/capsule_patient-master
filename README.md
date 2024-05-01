@@ -1,16 +1,32 @@
-# capsule_patient
 
-A new Flutter project.
+# Capsule Finding mobile application
 
-## Getting Started
+This is the source code for Flutter Capsule Finding App with its cool functionalties.
 
-This project is a starting point for a Flutter application.
+## App Features
 
-A few resources to get you started if this is your first Flutter project:
+- Search medicine 
+- find location on pharmacy
+- Prescription Submittion
+- allow comunicate Customer and pharmacy 
+- pharmacy can give answers for Prescription
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Set up
+
+- To clone this repository
+```bash
+  https://github.com/pasinduJDJ/capsule_patient-master.git
+```
+
+- In the project root directory to install all the required dependencies.
+
+```bash
+  flutter pub get
+```
+
+
+## Screenshots
+
+![App Screenshot](https://drive.google.com/drive/folders/1qWYegCllQT6TlLW6ME9ymg_p4x2tPw2P)
+
